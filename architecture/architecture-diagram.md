@@ -24,4 +24,4 @@ flowchart LR
     C -->|aggregated output| E
     C -->|raw output| F
 
-    G -->|HTTP request for dashboard data| E
+    G -->|Retrive dashboard data| E
