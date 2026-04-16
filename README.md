@@ -1,9 +1,9 @@
 # Project Repository Links
 
 ## Student Information
-- **Name:** Your Full Name
-- **Student ID:** 123456789
-- **Course:** CST8916 - Fall 2025
+- **Name:** Thomas de Haan Carriere
+- **Student ID:** 41276876
+- **Course:** CST8916 
 
 ## Repository Links
 
