@@ -1,4 +1,4 @@
-# Project Repository Links
+# CST8916 - Final Project
 
 ## Student Information
 - **Name:** Thomas de Haan Carriere
