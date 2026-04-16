@@ -22,3 +22,16 @@
 ## Demo
 
 - **Video Demo:** [YouTube]
+
+## System Architecture
+
+## Implementation Overview
+
+## Setup Instructions
+
+## Results and Analysis
+
+## Challenges and Solutions
+
+## AI Tools Disclosure
+
