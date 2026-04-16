@@ -21,7 +21,7 @@
 
 ## Demo
 
-- **Video Demo:** [YouTube]
+- **Video Demo:** https://youtu.be/gtDjWlopZ40
 
 ## System Architecture
 
