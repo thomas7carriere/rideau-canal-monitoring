@@ -41,14 +41,73 @@ Data Flow:
 - Cosmos DB setup: a simple database which is configured as the output for the aggregated data processed by the stream analytics job.
 - Blob Storage configuration: blob storage configured as an output for the raw data received by the stream analytics job.
 - Web Dashboard: a python flask application displaying the aggregated data from the stream analytics job by connecting to the Cosmos DB.
-- Azure App Service deployment: 
+- Azure App Service deployment: the dashboarh python application was deployed using Azure App Service
 
 ## Setup Instructions
 
+Prerequisites:
+
+- Azure resources:
+- Azure IoT Hub
+- Azure Stream Analytics Job
+- Azure Cosmos DB (Database: CanalDB, Container: SensorData)
+- Azure Web App (Python runtime)
+
+1. Clone the Repository: `git clone https://github.com/thomas7carriere/rideau-canal-dashboard.git`
+
+2. Install Dependencies
+`pip install -r requirements.txt`
+
+3. Configure Environment Variables (Local Development)
+
+Create a file named .env in the project root and add:
+
+- COSMOS_ENDPOINT=https://your-cosmos-account.documents.azure.com:443/
+- COSMOS_KEY=your-primary-key
+- COSMOS_DATABASE=CanalDB
+- COSMOS_CONTAINER=SensorData
+
+These variables allow the dashboard to connect to Azure Cosmos DB.
+
+4. Run the Dashboard Locally
+
+`python app.py`
+
+Open a browser and navigate to:
+
+http://localhost:5000
+
+The dashboard will display real-time sensor data retrieved from Cosmos DB.
+
+5. Deploy to Azure App Service
+Push the repository to GitHub
+Configure Deployment Center in Azure to use the repository
+Set the required environment variables in:
+Azure Portal
+→ App Service
+→ Settings
+→ Environment Variables
+
+Add:
+
+COSMOS_ENDPOINT
+COSMOS_KEY
+COSMOS_DATABASE=CanalDB
+COSMOS_CONTAINER=SensorData
+
+Configure the startup command:
+gunicorn -w 2 -b 0.0.0.0:$PORT app:app
+
+After deployment, the dashboard will be accessible via the Azure Web App URL.
+
 ## Results and Analysis
+
+
 
 ## Challenges and Solutions
 
+Challenge: Deploying the Flask dashboard to Azure App Service resulted in startup failures.
+Solution: Configured the correct startup command using Gunicorn and ensured required environment variables were set in App Service.
 
 
 ## AI Tools Disclosure
