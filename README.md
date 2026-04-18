@@ -90,10 +90,10 @@ Azure Portal
 
 Add:
 
-COSMOS_ENDPOINT
-COSMOS_KEY
-COSMOS_DATABASE=CanalDB
-COSMOS_CONTAINER=SensorData
+- COSMOS_ENDPOINT
+- COSMOS_KEY
+- COSMOS_DATABASE=CanalDB
+- COSMOS_CONTAINER=SensorData
 
 Configure the startup command:
 gunicorn -w 2 -b 0.0.0.0:$PORT app:app
@@ -102,7 +102,19 @@ After deployment, the dashboard will be accessible via the Azure Web App URL.
 
 ## Results and Analysis
 
+Results and Analysis
 
+The system successfully simulated real-time environmental data from three locations (Dow's Lake, Fifth Avenue, and NAC) and processed the data using Azure Stream Analytics. Aggregated readings were stored in Cosmos DB and displayed on a web-based dashboard.
+
+The dashboard provides:
+
+- Real-time data display for three locations
+- Safety status classification (Safe, Caution, Unsafe)
+- Automatic refresh every 30 seconds
+- Historical trend visualization for the last hour
+- Centralized monitoring of ice and weather conditions
+
+The pipeline demonstrated reliable real-time data processing and visualization using cloud-native services.
 
 ## Challenges and Solutions
 
