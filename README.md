@@ -102,7 +102,6 @@ After deployment, the dashboard will be accessible via the Azure Web App URL.
 
 ## Results and Analysis
 
-Results and Analysis
 
 The system successfully simulated real-time environmental data from three locations (Dow's Lake, Fifth Avenue, and NAC) and processed the data using Azure Stream Analytics. Aggregated readings were stored in Cosmos DB and displayed on a web-based dashboard.
 
@@ -119,7 +118,7 @@ The pipeline demonstrated reliable real-time data processing and visualization u
 ## Challenges and Solutions
 
 Challenge: Deploying the Flask dashboard to Azure App Service resulted in startup failures.
-Solution: Configured the correct startup command using Gunicorn and ensured required environment variables were set in App Service.
+Solution: A startup.txt file was created for the project, as well as a startup command configured on the Azure Web App. They seemed to conflict with eachother, so the startup.txt file was deleted to solve the issue.
 
 
 ## AI Tools Disclosure
